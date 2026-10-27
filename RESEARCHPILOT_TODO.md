@@ -45,33 +45,33 @@ Keep the first version small. Use one embedding model and one local LLM initiall
 - [x] Add initial pytest tests and a README with setup instructions.
 
 ## C. Implement document ingestion
-- [ ] Create an endpoint to upload PDF files.
-- [ ] Validate file type and file size; return helpful errors for invalid or empty PDFs.
-- [ ] Extract text page by page with PyMuPDF.
-- [ ] Keep document name and page number as metadata.
-- [ ] Split extracted text into chunks with a configurable size and overlap.
-- [ ] Add tests for valid PDFs, empty PDFs, invalid file types, and extraction errors.
+- [x] Create an endpoint to upload PDF files.
+- [x] Validate file type and file size; return helpful errors for invalid or empty PDFs.
+- [x] Extract text page by page with PyMuPDF.
+- [x] Keep document name and page number as metadata.
+- [x] Split extracted text into chunks with a configurable size and overlap.
+- [x] Add tests for valid PDFs, empty PDFs, invalid file types, and extraction errors.
 
 ## D. Add embeddings and retrieval
-- [ ] Generate embeddings using a Sentence Transformers model.
-- [ ] Store chunks, embeddings, and metadata in ChromaDB.
-- [ ] Implement a search function that retrieves the most relevant chunks for a question.
-- [ ] Return the source document and page number for every retrieved chunk.
-- [ ] Test retrieval with questions whose answers are present in the PDF and questions whose answers are absent.
+- [x] Generate embeddings using a Sentence Transformers model.
+- [x] Store chunks, embeddings, and metadata in ChromaDB.
+- [x] Implement a search function that retrieves the most relevant chunks for a question.
+- [x] Return the source document and page number for every retrieved chunk.
+- [x] Test retrieval with questions whose answers are present in the PDF and questions whose answers are absent.
 
 ## E. Generate grounded answers
-- [ ] Install and run Ollama with a model that fits the computer's resources.
-- [ ] Send the question and retrieved context to the model.
-- [ ] Write a prompt that instructs the model to answer from supplied evidence and say when the evidence is insufficient.
-- [ ] Return the answer and citations in a consistent JSON response.
-- [ ] Test that citations map to actual retrieved pages and that unsupported questions are handled honestly.
+- [x] Install and run Ollama with a model that fits the computer's resources.
+- [x] Send the question and retrieved context to the model.
+- [x] Write a prompt that instructs the model to answer from supplied evidence and say when the evidence is insufficient.
+- [x] Return the answer and citations in a consistent JSON response.
+- [x] Test that citations map to actual retrieved pages and that unsupported questions are handled honestly.
 
 ## Stage 1 completion checklist
-- [ ] A fresh setup works using only the README instructions.
-- [ ] Upload → extraction → chunking → embedding → retrieval → answer works end to end.
-- [ ] Automated tests pass.
-- [ ] Answers include source references and do not pretend to know information absent from the documents.
-- [ ] Record known limitations in the README.
+- [x] A fresh setup works using only the README instructions.
+- [x] Upload → extraction → chunking → embedding → retrieval → answer works end to end.
+- [x] Automated tests pass.
+- [x] Answers include source references and do not pretend to know information absent from the documents.
+- [x] Record known limitations in the README.
 
 **Do not move to Stage 2 until this flow works reliably.**
 
@@ -91,11 +91,11 @@ Keep the first version small. Use one embedding model and one local LLM initiall
 - [ ] Add background processing for long document-ingestion jobs if needed.
 
 ## B. Support multiple documents
-- [ ] Let users upload and query multiple PDFs together.
-- [ ] Add metadata filters so a user can search selected documents.
+- [x] Let users upload and query multiple PDFs together.
+- [x] Add metadata filters so a user can search selected documents.
 - [ ] Prevent duplicate ingestion or define how duplicate uploads are handled.
 - [ ] Improve chunking and retrieval based on tests, not guesswork.
-- [ ] Make citations identify the document and page clearly.
+- [x] Make citations identify the document and page clearly.
 
 ## C. Build the research agent
 - [ ] Define one bounded use case: compare reports and produce an evidence-based summary.
@@ -109,11 +109,11 @@ Keep the first version small. Use one embedding model and one local LLM initiall
 - [ ] Save task status and the final report so the user can inspect the result.
 
 ## D. Add a simple interface
-- [ ] Build a React interface for uploading documents and viewing ingestion status.
-- [ ] Add a chat screen with answers and clickable source references.
+- [x] Build a React interface for uploading documents and viewing ingestion status.
+- [x] Add a chat screen with answers and clickable source references.
 - [ ] Add a research-task form and a report/results screen.
-- [ ] Show loading, empty, and error states clearly.
-- [ ] Keep the interface focused on demonstrating the AI workflow rather than adding decorative features.
+- [x] Show loading, empty, and error states clearly.
+- [x] Keep the interface focused on demonstrating the AI workflow rather than adding decorative features.
 
 ## Stage 2 completion checklist
 - [ ] Users can manage their own documents securely.

@@ -1,11 +1,20 @@
 # Core API Framework
 fastapi>=0.115.0
 uvicorn[standard]>=0.32.0
+python-multipart>=0.0.9
 
 # Settings & Validation
 pydantic>=2.10.0
 pydantic-settings>=2.6.0
 
+# Document Ingestion & Parsing
+pymupdf>=2.0.0
+
+# Retrieval & Vector Store
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+
 # HTTP Client & Testing
 httpx>=0.28.0
 pytest>=8.3.0
+
